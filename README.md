@@ -10,7 +10,7 @@
     <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">A deep reinforcement learning agent learning to play the classical game of Tetris.</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
