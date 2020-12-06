@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="80" height="80">
+    <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
