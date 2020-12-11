@@ -55,7 +55,7 @@ It proves to be a perfect game to empirically test Deep Reinforcement Learning (
 
 In this project, we employ a DRL agent using replay memory, delineated in the following architecture. 
 
-   <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
+   <img src="outputs/arch.png" alt="Logo" width="300" height="300">
   </a>
 
 
