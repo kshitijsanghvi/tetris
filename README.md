@@ -11,18 +11,6 @@
   </a>
 
   <h3 align="center">A deep reinforcement learning agent learning to play the classical game of Tetris.</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </p>
 
@@ -35,7 +23,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Frameworks & Technologies</a></li>
       </ul>
     </li>
     <li>
@@ -45,11 +33,9 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#usage">Run the Program</a></li>
+    <li><a href="#Interpreting Output">Interpreting output</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -59,112 +45,102 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
 This project serves as a submission for the course Introduction to Deep Learning Systems, Fall 2020, taught by Prof. Parijat Dube at the Courant Institute of Mathematical Sciences, New York University.
 
-In this project deep reinforecemnt learning technique incorporating replay memeory has been employed to achieve 
-test
+Tetris is a classic tile-matching game first introduced in 1984.
+
+It proves to be a perfect game to empirically test Deep Reinforcement Learning (DRL) techniques and algorithms over simpler games.
+
+In this project, we employ a DRL agent using replay memory, delineated in the following architecture. 
+
+   <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
+  </a>
+
+
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
+The project was developed using the following technologies and their respective versions:
+* tensorflow v1.14.0
+* tensorboard v1.14.0
+* Keras v2.2.4
+* opencv-python v4.1.0.25
+* numpy v1.16.4
+* pillow v5.4.1
+* tqdm v4.31.1
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To run the above program it is recommended to create a new working environment. (The code is not compatible with tensorflow >= 1.15 due to depreciation of the FileWriter module)
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Create a new conda environment using the following command
   ```sh
-  npm install npm@latest -g
+  conda create --name tetris
   ```
+* Activate the new conda environment
+  ```sh
+  conda activate tetris
+  ```
+  
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+ Install the specific version of all the above mentioned packages using the pip command.   
+ Example      
+ ```sh
+ pip install tensorflow==1.14
+  ```
+  
+
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Run the program
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once the environment and dependencies are set up using the following command to run the program
+ ```sh
+ python run.py
+  ```
+  
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
 <!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+## Interpreting Output
 
 
+The stdout shows the expected time of completion using the tqdm package.
+OpenCV generates the simulation and visually portrays the agent interacting with the environment.
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
+Sample Output
+<img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
 <!-- LICENSE -->
 ## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
+No license
 <!-- CONTACT -->
 ## Contact
+**Allyn Muzhi Xu** [https://github.com/allynmuzhixu/](https://github.com/allynmuzhixu/)
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+**Kshitij Sanghvi** [https://github.com/kshitijsanghvi/](https://github.com/kshitijsanghvi/)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+[1] Watkins, C.J.C.H. (1989).Learning from delayed rewards. PhD Thesis, University of Cambridge, England.
+[2] Richard Sutton and Andrew Barto. Reinforcement Learning: An Introduction. MIT Press, 1998.
+[3] Mnih et al. Playing Atari with Deep Reinforcement Learning. 2013
+[4] Nuno Faria. Tetris-ai [https://github.com/nuno-faria/tetris-ai]
+[5] GitHub. Matris - “A clone of tetris made using pygame.” [https://github.com/Uglemat/MaTris]
+[6] Stevens, Matt and Pradhan, Sabeek. “Playing tetris with deep reinforcement learning.”
+http://cs231n.stanford.edu/reports/2016/pdfs/121_Report.pdf, Unpublished.
 
 
 
