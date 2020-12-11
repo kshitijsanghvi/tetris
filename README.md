@@ -120,7 +120,7 @@ The stdout shows the expected time of completion using the tqdm package.
 OpenCV generates the simulation and visually portrays the agent interacting with the environment.
 
 Sample Output
-<img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
+<img src="outputs/tetris_out.gif" width="370" height="548">
 
 To monitor live performance use tensorboard using the following command:
   ```sh
