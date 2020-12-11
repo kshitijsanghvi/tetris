@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
+    <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="400" height="300">
   </a>
 
   <h3 align="center">A deep reinforcement learning agent learning to play the classical game of Tetris.</h3>
@@ -120,7 +120,11 @@ The stdout shows the expected time of completion using the tqdm package.
 OpenCV generates the simulation and visually portrays the agent interacting with the environment.
 
 Sample Output
+
+
 <img src="https://github.com/kshitijsanghvi/tetris/blob/main/outputs/testris_out.gif" width="370" height="548">
+
+
 
 To monitor live performance use tensorboard using the following command:
   ```sh
