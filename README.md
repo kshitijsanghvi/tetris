@@ -121,6 +121,12 @@ OpenCV generates the simulation and visually portrays the agent interacting with
 
 Sample Output
 <img src="https://cdn.mos.cms.futurecdn.net/FJY29u96GopjnjRhWi2N6i-1024-80.jpg.webp" alt="Logo" width="300" height="300">
+
+To monitor live performance use tensorboard using the following command:
+  ```sh
+  tensorboard --logdir <path-to-log-folder>
+  ```
+
 <!-- LICENSE -->
 ## License
 No license
@@ -135,15 +141,10 @@ No license
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 [1] Watkins, C.J.C.H. (1989).Learning from delayed rewards. PhD Thesis, University of Cambridge, England.
-
 [2] Richard Sutton and Andrew Barto. Reinforcement Learning: An Introduction. MIT Press, 1998.
-
 [3] Mnih et al. Playing Atari with Deep Reinforcement Learning. 2013
-
 [4] Nuno Faria. Tetris-ai [https://github.com/nuno-faria/tetris-ai]
-
 [5] GitHub. Matris - “A clone of tetris made using pygame.” [https://github.com/Uglemat/MaTris]
-
 [6] Stevens, Matt and Pradhan, Sabeek. “Playing tetris with deep reinforcement learning.”
 http://cs231n.stanford.edu/reports/2016/pdfs/121_Report.pdf, Unpublished.
 
