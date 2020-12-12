@@ -34,7 +34,8 @@ class DQNAgent:
 
     def __init__(self, state_size, mem_size=10000, discount=0.95,
                  epsilon=1, epsilon_min=0, epsilon_stop_episode=500,
-                 n_neurons=[32,32], activations=['relu', 'relu', 'linear'],add_batch_norm=False,
+                 n_neurons=[32,32], activations=['relu', 'relu', 'linear'],
+                 add_batch_norm=False,use_target_model=False,update_target_every=None,
                  loss='mse', optimizer='adam', replay_start_size=None):
 
         assert len(activations) == len(n_neurons) + 1
@@ -53,6 +54,12 @@ class DQNAgent:
             replay_start_size = mem_size / 2
         self.replay_start_size = replay_start_size
         self.model = self._build_model(add_batch_norm)
+        
+        self.use_target_model = use_target_model
+        if use_target_model:
+            self.target_model = tf.keras.models.clone_model(self.model)
+            self.target_counter = 0
+            self.update_target_every = update_target_every
 
     def _build_model(self, add_batch_norm=False):
         '''Builds a Keras deep neural network model'''
@@ -121,8 +128,11 @@ class DQNAgent:
             
             states,next_states,reward,done = map(lambda x : np.array(x), zip(*batch))
             
-
-            next_qs = self.model.predict(next_states).flatten()            
+            if not self.use_target_model:
+                next_qs = self.model.predict(next_states).flatten()            
+            else:
+                next_qs = self.target_model.predict(next_states).flatten()
+                self.target_counter += 1
             
             new_q = reward + ~done * self.discount * next_qs
             
@@ -132,3 +142,7 @@ class DQNAgent:
             # Update the exploration variable
             if self.epsilon > self.epsilon_min:
                 self.epsilon -= self.epsilon_decay
+            
+            if self.target_counter >= self.update_target_every:
+                self.target_model = tf.keras.models.clone_model(self.model)
+                self.target_counter = 0
