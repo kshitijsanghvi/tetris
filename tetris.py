@@ -247,10 +247,11 @@ class Tetris:
         total_bumpiness, max_bumpiness = self._bumpiness(board, column_heights)
         sum_height, max_height, min_height = self._height(board, column_heights)
         return [lines, holes, total_bumpiness, sum_height]
+        # return np.concatenate( [ [lines, holes], column_heights ] ) # Describe the board state using column heights
         
     def get_state_size(self):
         '''Size of the state'''
-        return 4
+        return 4 #12 # Use 12 if describing with column heights
 
 
     def set_board(self, board):
